@@ -2,12 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:weightSum="1"
+              android:id="@+id/fagment_preview">
 
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Привет, друг! Этот небольшой тест поможет определить степень твоей ленивости и раздолбайства! Жми 'Старт' чтобы начать"/>
+        android:text="
+        Привет, друг!
+        Этот небольшой тест поможет определить степень твоей ленивости и раздолбайства!
+        Вводи число.
+        Жми 'Старт' чтобы начать"
+        android:layout_weight="0.50"
+        android:focusable="false"
+        android:clickable="true"
+
+        />
+
+
+   <!--<NumberPicker
+        android:id="@+id/editNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.08"></NumberPicker>-->
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Старт"
+        android:id="@+id/start"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.15"/>
+
 </LinearLayout>
