@@ -1,46 +1,38 @@
 package com.lazytest.airo.lazytest;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 
 /**
  * Created by Airo on 21.05.2016.
  */
-public class PreviewFragment extends Fragment {
-    private EditText mNumberField;
+public class FragmentPreview extends Fragment {
+    private NumberPicker mNumberField;
     private Button mStartButton;
     private static final String NUMBER = "Number";
     private int number;
+    private String numberEnter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_preview, container, false);
-        mNumberField = (EditText) v.findViewById(R.id.editNumber);
-        number = Integer.parseInt(String.valueOf(mNumberField));
+       /*mNumberField = (NumberPicker) v.findViewById(R.id.editNumber);
+        number = mNumberField.getValue();*/
         mStartButton = (Button) v.findViewById(R.id.start);
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager manager = getFragmentManager();
-                QuastionFragment qustionFragment = new QuastionFragment();
-                Bundle bundle = new Bundle();
-                bundle.putInt(NUMBER, number);
-                qustionFragment.setArguments(bundle);
-                FragmentTransaction ft  = manager.beginTransaction();
-                ft.replace(R.id.fagment_preview  , qustionFragment);
-                ft.commit();
-
+                Intent intent = new Intent(getActivity(), ActivityQuastion.class);
+                startActivity(intent);
             }
         });
         return v;
