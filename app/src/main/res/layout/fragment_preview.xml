@@ -11,11 +11,7 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="
-        Привет, друг!
-        Этот небольшой тест поможет определить степень твоей ленивости и раздолбайства!
-        Вводи число.
-        Жми 'Старт' чтобы начать"
+        android:text="Привет, друг! Этот небольшой тест поможет определить степень твоей ленивости и раздолбайства!"
         android:layout_weight="0.50"
         android:focusable="false"
         android:clickable="true"

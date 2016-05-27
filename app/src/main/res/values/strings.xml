@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Тест на лень</string>
     <string name="lazy_title">Ндаа, ленивая ты задница!</string>
+    <string name="strong_title">Молодец! Поздравяю!</string>
 </resources>
